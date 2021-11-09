@@ -25,7 +25,7 @@ class MoviesService extends BaseService_1.default {
             });
         }
         catch (error) {
-            return false;
+            return error;
         }
     }
     async fetchMovies() {

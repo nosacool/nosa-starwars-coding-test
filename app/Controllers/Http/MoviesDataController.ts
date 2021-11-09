@@ -15,12 +15,12 @@ export default class MoviesDataController extends BaseController {
   public async getData({response}:HttpContextContract){
 
     const result =(await axios.get('https://swapi.dev/api/films/')).data
-
-    if(await MoviesServices.insertData(result.results)){
+    var answer = await MoviesServices.insertData(result.results)
+    if(answer == true){
       response.send({done: true})
     }
     else{
-      response.status(500).send({done: false})
+      response.status(500).send({done: answer})
     }
 
   }
