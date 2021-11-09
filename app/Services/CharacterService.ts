@@ -1,9 +1,9 @@
-import CharacterServices from "@ioc:MyProject/CharacterService";
+//import CharacterServices from "@ioc:MyProject/CharacterService";
 import Character from "App/Models/Character";
 import CharacterInterface from "Contracts/interfaces/Character.Interface";
 import BaseService from "./BaseService";
 import axios from "axios";
-import Database from "@ioc:Adonis/Lucid/Database";
+//import Database from "@ioc:Adonis/Lucid/Database";
 
 export default class CharacterService extends BaseService implements CharacterInterface{
   protected query
@@ -58,7 +58,7 @@ export default class CharacterService extends BaseService implements CharacterIn
         result.results.forEach(async character => {
           delete character.created
           delete character.edited
-          const people = await Character.create(character)
+          await Character.create(character)
           //console.log(people)
         });
       }

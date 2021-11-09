@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon'
-import { afterFetch, BaseModel, beforeSave, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, beforeSave, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Character extends BaseModel {
   @column({ isPrimary: true })

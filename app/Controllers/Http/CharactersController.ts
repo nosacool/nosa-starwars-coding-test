@@ -1,7 +1,7 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import CharacterServices from '@ioc:MyProject/CharacterService';
 import BaseController from "./BaseController";
-import { schema, rules,validator } from '@ioc:Adonis/Core/Validator'
+import { schema, rules} from '@ioc:Adonis/Core/Validator'
 import Helpers from 'App/Helpers/Helpers';
 
 export default class CharactersController extends BaseController {
