@@ -1,5 +1,5 @@
 {
-  "typescript": true,
+  "typescript": false,
   "commands": [
     "./commands",
     "@adonisjs/core/build/commands/index.js",
@@ -24,5 +24,6 @@
   ],
   "aceProviders": [
     "@adonisjs/repl"
-  ]
+  ],
+  "lastCompiledAt": "2021-11-09T12:50:48.827Z"
 }
