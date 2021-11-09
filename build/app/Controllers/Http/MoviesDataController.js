@@ -12,11 +12,12 @@ const Validator_1 = global[Symbol.for('ioc.use')]("Adonis/Core/Validator");
 class MoviesDataController extends BaseController_1.default {
     async getData({ response }) {
         const result = (await axios_1.default.get('https://swapi.dev/api/films/')).data;
-        if (await MoviesService_1.default.insertData(result.results)) {
+        var answer = await MoviesService_1.default.insertData(result.results);
+        if (answer == true) {
             response.send({ done: true });
         }
         else {
-            response.status(500).send({ done: false });
+            response.status(500).send({ done: answer });
         }
     }
     async fetchMovies({ response }) {
