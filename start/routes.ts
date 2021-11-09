@@ -26,8 +26,10 @@ Route.get('/', async () => {
 })
 Route.group(()=>{
   Route.get('/','MoviesDataController.fetchMovies')
+  Route.get('/getData','MoviesDataController.getData')
   Route.get(':id/comments','MoviesDataController.fetchMovieComments')
   Route.post(':id/comments','MoviesDataController.addMovieComments')
   Route.get('characters','CharactersController.getCharacters')
+  Route.get('getChar','CharactersController.fetchData')
 }).prefix('movies')
 
