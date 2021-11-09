@@ -24,7 +24,7 @@ export default class MoviesService extends BaseService implements MoviesInterfac
         return true
       });
     } catch (error) {
-      return false
+      return error
     }
 
 
